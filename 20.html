@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>NAV</title>
+<!-- Enlace al CSS -->
+<link rel="stylesheet"href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"crossorigin="anonymous"/>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css">
+<!-- Script -->
+<script src="script.js"></script>  
+<!-- Iconify -->
+<script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+<link rel="icon" href="https://raw.githubusercontent.com/pizzaddicted4life/ANDROS.github.io/refs/heads/main/assets/images/00-_2_-.ico" type="favicon" />
+<!-- Babel para transpilar JavaScript moderno -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>  
+<!-- Fuentes e iconos -->
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color:#000;
+    font-family: "Saira", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  body * {
+    z-index: 2;
+  }
+      .canvas {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
+
+
+    .grid{
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.grid:before,
+.grid:after,
+.row:before,
+.row:after{
+	content: " ";
+	display: table;
+}
+
+.grid:after,
+.row:after{
+	clear: both;
+}
+
+[class*="col-"]{
+	width: 100%;
+	float: left;
+}
+
+.col{
+	padding: 1em;
+	margin: 8px;
+	background: #ff3333;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.3);
+	color: #fff;
+	text-align: center;
+}
+
+/* Making it Responsive using CSS Media Rules*/
+
+@media screen and (min-width:30px){
+	.col-wd-1{
+	width: 8.33333%;
+}
+	.col-wd-2{
+	width: 16.66667%;
+}
+	.col-wd-3{
+	width: 25%;
+}
+	.col-wd-4{
+	width: 33.33333%;
+}
+	.col-wd-5{
+	width: 41.66667%;
+}
+	.col-wd-6{
+	width: 50%;
+}
+	.col-wd-7{
+	width: 58.33333%;
+}
+	.col-wd-8{
+	width: 66.66667%;
+}
+	.col-wd-9{
+	width: 75%;
+}
+	.col-wd-10{
+	width: 83.33333%;
+}
+	.col-wd-11{
+ 	width: 91.66667%;
+}
+	.col-wd-12{
+	width: 100%;
+}
+}
+
+@media screen and (min-width: 64px){
+	.col-md-1{
+	width: 8.33333%;
+}
+	.col-md-2{
+	width: 16.66667%;
+}
+	.col-md-3{
+	width: 25%;
+}
+	.col-md-4{
+	width: 33.33333%;
+}
+	.col-md-5{
+	width: 41.66667%;
+}
+	.col-md-6{
+	width: 50%;
+}
+	.col-md-7{
+	width: 58.33333%;
+}
+	.col-md-8{
+	width: 66.66667%;
+}
+	.col-md-9{
+	width: 75%;
+}
+	.col-md-10{
+	width: 83.33333%;
+}
+	.col-md-11{
+ 	width: 91.66667%;
+}
+	.col-md-12{
+	width: 100%;
+}
+}
+
+@media screen and (min-width: 600px){
+	.col-sm-1{
+	width: 8.33333%;
+}
+	.col-sm-2{
+	width: 16.66667%;
+}
+	.col-sm-3{
+	width: 25%;
+}
+	.col-sm-4{
+	width: 33.33333%;
+}
+	.col-sm-5{
+	width: 41.66667%;
+}
+	.col-sm-6{
+	width: 50%;
+}
+	.col-sm-7{
+	width: 58.33333%;
+}
+	.col-sm-8{
+	width: 66.66667%;
+}
+	.col-sm-9{
+	width: 75%;
+}
+	.col-sm-10{
+	width: 83.33333%;
+}
+	.col-sm-11{
+ 	width: 91.66667%;
+}
+	.col-sm-12{
+	width: 100%;
+}
+} 
+
+/* Barra de navegación fija */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .left-menu, .navbar .right-menu {
+    position: relative;
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar .search-bar input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Dropdown general */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    display: none;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px 0;
+    min-width: 180px;
+    z-index: 100;
+}
+
+.dropdown a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #555;
+}
+
+.left-menu:hover .dropdown, .right-menu:hover .dropdown {
+    display: flex;
+}
+
+/* Submenú para Settings */
+.submenu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 180px;
+    background-color: #555;
+    min-width: 160px;
+    padding: 0;
+}
+
+.dropdown a:hover + .submenu {
+    display: block;
+}
+
+.dropdown .submenu a {
+    padding-left: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<!-- Barra de navegación fija -->
+
+<div canvas id='c'></div>
+<div class="navbar">
+       <!-- Menú desplegable de HOME a la izquierda -->
+       <div class="left-menu">
+           <button>HOME</button>
+           <div class="dropdown">
+               <a href="#home">Home</a>
+               <a href="#1column">1 Column</a>
+               <a href="#2column">2 Column</a>
+               <a href="#3column">3 Column</a>
+               <!-- Agrega más enlaces según sea necesario -->
+           </div>
+       </div>
+   
+       <!-- Barra de búsqueda en el centro -->
+       <div class="search-bar">
+           <input type="text" placeholder="Buscar...">
+       </div>
+   
+       <!-- Menú desplegable de SETTINGS a la derecha -->
+       <div class="right-menu">
+           <button>SETTINGS</button>
+           <div class="dropdown">
+               <a href="#perfil">Perfil</a>
+               <div class="submenu">
+                   <a href="#foto">Foto de perfil y nombre</a>
+                   <a href="#info">Información personal</a>
+               </div>
+               <a href="#ajustes">Ajustes / Configuración</a>
+               <div class="submenu">
+                   <a href="#general">General</a>
+                   <a href="#idioma">Idioma</a>
+                   <a href="#tema">Tema (oscuro, claro)</a>
+                   <a href="#fuente">Tamaño de fuente</a>
+                   <a href="#accesibilidad">Accesibilidad</a>
+               </div>
+               <a href="#logout">Cerrar sesión</a>
+           </div>
+       </div>
+   </div>
+
+    <div class="grid"><!--Main Grid Container-->
+        <div class="row"><!--Main Row Container-->
+       
+       <!--Each Column wrapped in DIVs-->
+        
+        <!--12 Columns wrapped in DIV-->
+       <div class="col-wd-12">
+                      <div class="col">12 Column</div>
+               </div>
+        <!--8 and 4 Columns wrapped in DIV-->
+       <div class="col-wd-8">
+                      <div class="col">8 Column</div>
+               </div>
+       
+       <div class="col-wd-4">
+                      <div class="col">4 Column</div>
+               </div>
+                <!--6 x 2 Columns wrapped in DIV-->
+               <div class="col-wd-6">
+                      <div class="col">6 Column</div>
+               </div>
+  
+               <div class="col-wd-6">
+                      <div class="col">6 Column</div>
+               </div>
+        <!--4 x 3 Columns wrapped in DIV-->
+               <div class="col-wd-6 col-md-4">
+                      <div class="col">4 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-4">
+                      <div class="col">4 Column</div>
+               </div>
+  
+               <div class="col-wd-12 col-md-4">
+                      <div class="col">4 Column</div>
+               </div>
+        <!--3 x 4 Columns wrapped in DIV-->
+               <div class="col-wd-6 col-md-3">
+                      <div class="col">3 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-3">
+                      <div class="col">3 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-3">
+                      <div class="col">3 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-3">
+                      <div class="col">3 Column</div>
+       </div>
+        <!--2 x 6 Columns wrapped in DIV-->
+               <div class="col-wd-6 col-md-4 col-sm-2">
+                      <div class="col">2 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-4 col-sm-2">
+                      <div class="col">2 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-4 col-sm-2">
+                      <div class="col">2 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-4 col-sm-2">
+                      <div class="col">2 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-4 col-sm-2">
+                      <div class="col">2 Column</div>
+               </div>
+  
+               <div class="col-wd-6 col-md-4 col-sm-2">
+                      <div class="col">2 Column</div>
+               </div>
+        <!--1 x 12 Columns wrapped in DIV-->
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+  
+               <div class="col-wd-3 col-md-2 col-sm-1">
+                      <div class="col">1 Column</div>
+               </div>
+        </div>
+  </div>  
+</div>
+</body>
+<script>
+function updatemenu() {
+  if (document.getElementById('responsive-menu').checked == true) {
+    document.getElementById('menu').style.borderBottomRightRadius = '0';
+    document.getElementById('menu').style.borderBottomLeftRadius = '0';
+  }else{
+    document.getElementById('menu').style.borderRadius = '13px';
+  }
+}
+
+
+
+
+
+
+    $(document).ready(function(){
+  $("#hamburger").click(function(){
+      $("#top").toggleClass("topRotate");
+      $("#bottom").toggleClass("bottomRotate");
+      $("#background").toggleClass("expand");
+
+      $("li").show();
+      $("li").toggleClass("anim");
+
+  });
+})
+
+
+const nav = document.querySelector(".nav"),
+  searchIcon = document.querySelector("#searchIcon"),
+  navOpenBtn = document.querySelector(".navOpenBtn"),
+  navCloseBtn = document.querySelector(".navCloseBtn");
+
+searchIcon.addEventListener("click", () => {
+  nav.classList.toggle("openSearch");
+  nav.classList.remove("openNav");
+  if (nav.classList.contains("openSearch")) {
+    return searchIcon.classList.replace("uil-search", "uil-times");
+  }
+  searchIcon.classList.replace("uil-times", "uil-search");
+});
+
+navOpenBtn.addEventListener("click", () => {
+  nav.classList.add("openNav");
+  nav.classList.remove("openSearch");
+  searchIcon.classList.replace("uil-times", "uil-search");
+});
+navCloseBtn.addEventListener("click", () => {
+  nav.classList.remove("openNav");
+});
+
+
+const canvas = document.getElementById('c')
+const ctx = canvas.getContext('2d')
+
+let width = canvas.width = window.innerWidth
+let height = canvas.height = window.innerHeight
+let isDragging = false
+
+/* Helper functions */
+const clamp = (val, min, max) => (
+  Math.min(Math.max(min, val), max)
+)
+
+/* Circle class */
+class Circle {
+  constructor(x, y, r) {
+    this.r = r
+    this.fric = 0.95
+    this.pos = { x, y }
+    this.vel = { x: 0, y: 0 }
+  }
+  
+  draw() {
+    const { pos, r } = this
+    ctx.beginPath()
+    ctx.arc(pos.x, pos.y, r, 0, Math.PI * 2)
+    ctx.fillStyle = 'orange'
+    ctx.fill()
+    ctx.closePath()
+  }
+  
+  update() {
+    const { pos, r } = this
+    this.draw()
+    
+    if (!isDragging) {  
+      // update pos & vel
+      this.pos.x += this.vel.x
+      this.pos.y += this.vel.y
+      this.vel.x *= this.fric
+      this.vel.y *= this.fric   
+      
+      // if hitting a wall
+      if ((pos.x - r) < 0 || (pos.x + r) > width)  this.vel.x *= -1
+      if ((pos.y - r) < 0 || (pos.y + r) > height) this.vel.y *= -1
+    }
+    
+    this.pos.x = clamp(pos.x, r, width-r)
+    this.pos.y = clamp(pos.y, r, height-r)
+  }
+}
+
+/* canvas elements */
+const circ = new Circle(width/2, height/2, 30)
+
+/* Main animation routine */
+function animate() {
+  requestAnimationFrame(animate)  
+  ctx.clearRect(0, 0, width, height)
+  
+  // draw circle
+  circ.update()
+}
+
+animate()
+
+/* Event Listeners */
+window.addEventListener('resize', () => {
+  width = canvas.width = window.innerWidth
+  height = canvas.height = window.innerHeight
+})
+
+window.addEventListener('mousedown', (e) => {
+  addEventListener('mousemove', setDragPos)
+  addEventListener('mouseup', onMouseUp)
+})
+
+function setDragPos({ clientX, clientY }) {
+  isDragging = true
+  // set velocity
+  circ.vel.x = (clientX - circ.pos.x) * 1.25
+  circ.vel.y = (clientY - circ.pos.y) * 1.25
+  
+  // set current pos
+  circ.pos.x = clamp(clientX, circ.r, width-circ.r)
+  circ.pos.y = clamp(clientY, circ.r, height-circ.r)
+}
+
+function onMouseUp() {
+  isDragging = false
+  // remove listeners
+  window.removeEventListener('mousemove', setDragPos)
+  window.removeEventListener('mouseup', onMouseUp)
+}
+
+</script>
+</html>
